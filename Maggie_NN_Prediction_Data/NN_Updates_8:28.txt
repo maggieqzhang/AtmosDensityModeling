@@ -1,0 +1,21 @@
+Deep NN 48 hours prediction script
+
+1. run density_data_pred_automation.ipynb to create the matrices that have each timestep predicted 48 hours into the future (some file path names in the script are unique to my local machine, so change them to match the path on your own computer)
+
+2. all data from training including train, test, and validation are stored in the split_reduced_data folder in a mat file. Additionally, for the training and validation, these were split using a random seed. For all 4 datasets, I used seed = 42
+
+	For MSISE
+	Train/Val = indices 0 to 89412 (later split using random state 42)
+	(x_train, x_val, y_train, y_val = train_test_split(x_train, y_train, test_size=0.17647, random_state=42))
+	Test = indices 89413 to 105192
+
+	For JB
+	Train/Val = indices 0 to 87844
+	Test = indices 87845 to 103404
+
+3. Full sets of the data are also found in this file (for POD reduced, I used the ones previously in the dropbox)
+
+4. The actual trained models are in the folder NN_models
+
+
+
